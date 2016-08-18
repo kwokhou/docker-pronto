@@ -14,4 +14,4 @@ RUN gem install pronto-flay:${PRONTO_FLAY_VERSION:-0.7.0}
 RUN gem install rubocop:${RUBOCOP_VERSION:-0.42.0}
 RUN gem install flay:${FLAY_VERSION:-2.8.0}
 
-CMD [ "pronto help" ]
+CMD [ "pronto", "run" ]
