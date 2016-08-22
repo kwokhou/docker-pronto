@@ -18,4 +18,14 @@ Running the image without and argument is equivalent of running `pronto run` (Se
 docker run -v `pwd`:/data --rm kwokhou/pronto pronto run
 ```
 
+### Running Pronto on Bitbucket
+
+To run Pronto against a Bitbucket repo, you can run the following command:
+```
+docker run -v `pwd`:/data --rm -e "BITBUCKET_USERNAME=MYUSERNAME" -e "BITBUCKET_PASSWORD=MYPASSWORD" kwokhou/pronto pronto run -f bitbucket -c origin/development
+```
+
+ - `-f` is the output formatters
+ - `-c` is the commit to run `diff`. (Here it `diff` against the `development` branch)
+
 Check out https://github.com/mmozuras/pronto#usage for more details
